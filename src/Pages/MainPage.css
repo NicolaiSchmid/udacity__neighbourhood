@@ -1,0 +1,74 @@
+main {
+    display: grid;
+
+}
+
+@media (min-width: 950px) {
+    main {
+        grid-template-rows: 64px auto 240px;
+        grid-template-columns: 30% 70%;
+    }
+
+    .filterComponent {
+        grid-area: 1;
+    }
+
+    .listComponent {
+        grid-area: 2;
+    }
+
+    .informationComponent {
+        grid-area: 3 / 1 / 3 / 1;
+    }
+
+    .mapComponent {
+        grid-area: 1 / 2 / span 3 / 2;
+    }
+}
+
+@media (max-width: 949px) {
+    main {
+        grid-template-rows: auto 48px 240px 160px;
+        grid-template-columns: 100%;
+        /* grid-template-columns: 30% 70%; */
+    }
+    
+    .mapComponent {
+        grid-row: 1;
+    }
+
+    .filterComponent {
+        grid-row: 2;
+    }
+
+    .listComponent {
+        grid-row: 3;
+    }
+    .informationComponent {
+        grid-row: 4;
+    }
+}
+
+.informationComponent,
+.listComponent {
+    height: 100%;
+    width: 100%;
+
+    overflow-y: auto;
+}
+.filterComponent,
+.mapComponent {
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+.listComponent,
+.informationComponent {
+    background-color: var(--primary-colour);
+}
+
+.listComponent {
+    border-bottom: 3px solid white;
+}

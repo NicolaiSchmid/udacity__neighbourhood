@@ -1,0 +1,33 @@
+.marker {
+    padding: 8px;
+    color: white;
+}
+
+h2 {
+    margin: 4px;
+    font-size: 1.1em;
+}
+
+h3 {
+    margin: 4px;
+}
+h4 {
+    margin: 4px;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+}
+
+.credits {
+    align-self: flex-end;
+    justify-self: end;
+
+    margin: 8px;
+    color: white;
+    font-style: italic;
+    font-size: 0.8em;
+}

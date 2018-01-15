@@ -1,0 +1,32 @@
+/* TODO Fix overflowing layout */
+
+.App {
+  display: grid;
+
+  height: 100%;
+  width: 100%;
+
+  grid-template-rows: 64px auto;
+  grid-template-columns: 100%;
+}
+
+header {
+  background-color: var(--primary-colour);
+  color: white;
+  
+  font-size: 18px;
+  font-weight: 700;
+
+  display: flex;
+  padding-left: 8px;
+  align-items: center;
+
+  grid-row: 1;
+}
+
+main {
+  grid-row: 2;
+  
+  height: 100%;
+  width: 100%;
+}
