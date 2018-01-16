@@ -49,11 +49,11 @@ export default class InformationComponent extends Component {
                 <div className="marker">
                     <h2>Information</h2>
                     {(error) && (
-                        <div className="error">{error}</div>
+                        <div className="error" >{error}</div>
                     )}
                     {(marker) && (
                         <div>
-                            <h3>{marker.name}</h3>[<a href={marker.url} target="_blank">Website</a>]
+                            <h3>{marker.name}</h3>[<a href={marker.url} target="_blank" tabIndex="0">Website</a>]
                             {marker.categories.map((category) => {
                                 return (
                                     <h4 key={category.name}>{category.name}</h4>
