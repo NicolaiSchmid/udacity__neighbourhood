@@ -68,3 +68,8 @@ main {
 .informationComponent {
     background-color: var(--primary-colour);
 }
+
+.informationComponent {
+    border-top: 3px solid white;
+    border-radius: 3p;
+}
