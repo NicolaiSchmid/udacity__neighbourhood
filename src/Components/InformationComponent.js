@@ -56,7 +56,7 @@ export default class InformationComponent extends Component {
                             <h3>{marker.name}</h3>[<a href={marker.url} target="_blank">Website</a>]
                             {marker.categories.map((category) => {
                                 return (
-                                    <h4>{category.name}</h4>
+                                    <h4 key={category.name}>{category.name}</h4>
                                 )
                             })}
                         </div>
