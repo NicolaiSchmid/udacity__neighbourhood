@@ -110,7 +110,7 @@ export default class MainPage extends Component {
         return (
             <main>
                 <FilterComponent onQuery={this.filterMarkers} />
-                <InformationComponent markers={this.state.markers} />
+                <InformationComponent markers={this.state.markers} role="contentinfo" />
                 <ListComponent markers={this.state.markers} updateSelection={this.updateSelection} />
                 <div className="mapComponent">
                     <MapComponent markers={this.state.markers} updateSelection={this.updateSelection} />

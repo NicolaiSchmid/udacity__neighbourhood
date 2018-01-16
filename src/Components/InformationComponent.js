@@ -45,7 +45,7 @@ export default class InformationComponent extends Component {
         const { marker, error } = this.state;
 
         return (
-            <div className="informationComponent">
+            <div className="informationComponent" role="contentinfo">
                 <div className="marker">
                     <h2>Information</h2>
                     {(error) && (

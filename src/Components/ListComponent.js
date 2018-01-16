@@ -19,7 +19,8 @@ export default class ListComponent extends Component {
                                     className={className}
 
                                     tabIndex="0"
-                                    role="button"
+                                    role="radio"
+                                    aria-checked={marker.selected}
 
                                     onClick={() => this.props.updateSelection(marker.id)}
                                     onKeyDown={(event) => {
