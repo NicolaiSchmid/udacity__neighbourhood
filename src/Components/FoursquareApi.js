@@ -10,6 +10,7 @@ const paramsObject = {
     v: '20180110',
 };
 
+// This method just fetches information about the marker from the foursquare venue API
 export const get = (markerId) => {
     const paramsString = stringify(paramsObject);
 

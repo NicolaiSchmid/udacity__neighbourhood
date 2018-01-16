@@ -54,10 +54,16 @@ export default class MainPage extends Component {
         ]
     }
 
+    // This method updates the state of the page to reflect the current selected venue
     updateSelection(id) {
+        // Copy the state to a new array
         let markers = [].concat(this.state.markers);
 
+        // Map over the markers to set the selection state
         markers = markers.map((marker) => {
+            // The updateSelection function is called with an id of the selected item
+            // If the current marker is the selected the selected property gets updated
+            // otherwhise it's set to false
             if (marker.id === id) {
                 marker.selected = true;
             } else {
@@ -72,10 +78,18 @@ export default class MainPage extends Component {
         });
     }
 
+    // If a search query is entered, this method get's called by the filterComponent
+    // with the query string as an argument
     filterMarkers = (query) => {
+        // This creates a new Regex, which is escaped for malicious user input, 
+        // to test it against the marker names for filtering
         const match = new RegExp(escapeRegExp(query), 'i');
 
+        // This maps over the markers to check if the marker 
+        // is still within the search query
         let markers = this.state.markers.map((marker) => {
+            // If it is not (Regex Test) then the hidden property is set, 
+            // so the list and map elements aren't rendering it
             if (!match.test(marker.name)) {
                 marker.hidden = true;
             } else {
@@ -84,6 +98,7 @@ export default class MainPage extends Component {
             return marker;
         });
 
+        // Lastly all the matches are sorted by alphabet
         markers.sort(sortBy('name'));
 
         this.setState({
